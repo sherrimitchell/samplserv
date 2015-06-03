@@ -3,7 +3,7 @@ require 'httparty'
 
 class SamplParty
   include HTTParty
-  base_uri "http://localhost:4567"
+  base_uri "http://10.0.0.138:4567"
 
   def play_beat
     self.class.post("/beat")
@@ -144,8 +144,10 @@ def play_beat(version=nil)
     end
     self.class.post("/workit", options)
   end
+end
 
-  
+# binding.pry
+
 
 # toy = SamplParty.new
 # toy.play_beat
